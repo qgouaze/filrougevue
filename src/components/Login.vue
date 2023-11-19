@@ -27,7 +27,7 @@ export default {
       this.password = "";
     },
     login() {
-      //THIS IS HARDCODED, implement a database query
+      //THIS IS HARDCODED, implement a database query or api call
       if (this.nickName === "Plop" && this.password === "plop") {
         localStorage.setItem(
           "nickName",

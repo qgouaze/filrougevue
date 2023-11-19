@@ -96,13 +96,7 @@ export default {
   },
   computed: {
   },
-  method: {
-    addToWishList(book, event) {
-      alert("Blop! " + book.name);
 
-
-    }
-  }
 }
 </script>
 <template>
