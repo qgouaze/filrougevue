@@ -1,22 +1,21 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Sidebar from './components/Sidebar.vue';
-
+import { RouterLink, RouterView } from "vue-router";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+import Sidebar from "./components/Sidebar.vue";
 </script>
 
 <template>
-<Header/>
-<div class="content">
-<Sidebar/>
-  <RouterView />
-</div>
-  <Footer/>
+  <Header />
+  <div class="content">
+    <Sidebar />
+    <RouterView />
+  </div>
+  <Footer />
 </template>
 
 <style scoped>
-.content{
+.content {
   display: flex;
 }
 header {
@@ -24,9 +23,9 @@ header {
   max-height: 100vh;
   display: flex;
   justify-content: space-around;
-  margin-bottom:40px;
-  border-bottom:1px solid lightgrey;
-  margin-top:40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 40px;
 }
 
 .logo {
@@ -63,7 +62,7 @@ nav a:first-of-type {
   header {
     display: flex;
     justify-content: space-around;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   }
   nav {
     text-align: left;
@@ -74,7 +73,7 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-main{
-  width:100%;
+main {
+  width: 100%;
 }
 </style>

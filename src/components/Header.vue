@@ -25,12 +25,14 @@ export default {
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink :to="{ name: 'booklist' }">BookList</RouterLink>
-        <RouterLink v-if="isLoggedIn==true" :to="{ name: 'login' }"
+        <RouterLink v-if="isLoggedIn == true" :to="{ name: 'login' }"
           >Account</RouterLink
         >
-        <RouterLink v-else-if="isLoggedIn==false" :to="{ name: 'login' }">Login/Register</RouterLink>
+        <RouterLink v-else-if="isLoggedIn == false" :to="{ name: 'login' }"
+          >Login/Register</RouterLink
+        >
 
-        <RouterLink v-if="isLoggedIn==true" :to="{ name: 'wishlist' }"
+        <RouterLink v-if="isLoggedIn == true" :to="{ name: 'wishlist' }"
           >Wishlist!</RouterLink
         >
       </nav>
