@@ -7,6 +7,7 @@ export default {
     await this.getBook(bookId);
   },
   methods: {
+
     async getBook(bookId) {
       var url = "/src/assets/book_" + bookId + ".json";
       try {
@@ -36,7 +37,7 @@ export default {
       <h2 class="bookTitle">{{ book.name }}</h2>
       <div class="headerRight">
         <span class="bookAuthor">{{ book.author }}</span>
-        <button @click="addToWishlist">Wishlist!</button>
+        <button >Wishlist!</button>
       </div>
     </div>
     <div class="bookContent">

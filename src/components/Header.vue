@@ -31,7 +31,6 @@ export default {
         <RouterLink v-else-if="isLoggedIn == false" :to="{ name: 'login' }"
           >Login/Register</RouterLink
         >
-
         <RouterLink v-if="isLoggedIn == true" :to="{ name: 'wishlist' }"
           >Wishlist!</RouterLink
         >

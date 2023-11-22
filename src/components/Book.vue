@@ -19,18 +19,17 @@ export default {
     }
   },
   methods: {
+    addToWishList(id){
+      console.log("Book wishlist click");
+   
+      
+    },
     updateRating(new_rating) {
       this.newBook = this.book;
       this.newBook.rating = new_rating;
     }
-    ,
-    addToWishList(book){
-      console.log("Book wishlist click");
-      if (JSON.parse(localStorage.wishList).includes(JSON.stringify(book))){
-        localStorage.wishList+=JSON.stringify(book);
-        alert("Book added to wishList");
-      }
-    }
+    
+    
   },
   data() {
     return {
@@ -43,7 +42,7 @@ export default {
 <template>
   <div class="bookCard">
     <div class="bookCardHeader">
-      <router-link :to="{ name: 'book', params: { bookId: book.id } }">{{ book.name }}</router-link>>
+      <router-link :to="{ name: 'book', params: { bookId: book.id } }">{{ book.name }}</router-link>
       <span class="bookAuthor">{{ book.author }}</span>
     </div>
     <div class="bookCardContent">
@@ -63,7 +62,7 @@ export default {
       <span class="bookRating">
         <Rating @update="updateRating" color-plain-stars="green" :rating="book.rating" :max-of-stars="5"></Rating>
       </span>
-      <button @click="addToWishlist(book)">Wishlist!</button>
+      <button @click="addToWishlist(book.id)">Wishlist!</button>
     </div>
   </div>
 </template>
